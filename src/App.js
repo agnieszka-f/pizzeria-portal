@@ -1,23 +1,37 @@
 import React from 'react';
+import MainLayout from './components/layout/MainLayout/MainLayout.js';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Login from './components/views/Login/Login.js';
+import Tables from './components/views/Tables/Tables.js';
+import Waiter from './components/views/Waiter/Waiter.js';
+import Kitchen from './components/views/Kitchen/Kitchen.js';
+import Dashboard from './components/views/Dashboard/Dashboard.js';
+import BookingDetails from './components/views/BookingDetails/BookingDetails.js';
+import BookingNew from './components/views/BookingNew/BookingNew.js';
+import EventDetails from './components/views/EventDetails/EventDetails.js';
+import EventNew from './components/views/EventNew/EventNew.js';
+import OrderDetails from './components/views/OrderDetails/OrderDetails.js';
+import OrderNew from './components/views/OrderNew/OrderNew.js';
 
-function App() {
+function App() { //przy użyciu właściwości process.env.PUBLIC_URL nic nie wyświetla się!!!
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Cat Small
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename={'panel'}>
+      <MainLayout>
+	    <Switch>
+	      <Route exact path={'/'} component={Dashboard}/>
+	      <Route exact path={'/login'} component={Login}/>
+	      <Route exact path={'/tables'} component={Tables}/>
+          <Route exact path={'/tables/booking/new'} component={BookingNew}/>
+          <Route exact path={'/tables/booking/:id'} component={BookingDetails}/>
+          <Route exact path={'/tables/events/new'} component={EventNew}/>
+          <Route exact path={'/tables/events/:id'} component={EventDetails}/>		  
+	      <Route exact path={'/waiter'} component={Waiter}/>
+          <Route exact path={'/waiter/order/new'} component={OrderNew}/>
+          <Route exact path={'/waiter/order/:id'} component={OrderDetails}/>
+	      <Route exact path={'/kitchen'} component={Kitchen}/>
+	    </Switch>	
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 
