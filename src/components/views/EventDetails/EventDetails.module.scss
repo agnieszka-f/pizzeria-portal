@@ -2,4 +2,17 @@
 
 .component {
   padding: $base-size;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.title{
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.formControl{
+  width: 80%;
+  margin: 10px auto; 
+  background: #e8e8e8;
 }

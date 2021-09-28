@@ -36,8 +36,8 @@ function App() {
 	          <Route exact path={'/tables'} component={Tables}/>
               <Route exact path={'/tables/booking/new'} component={BookingNew}/>
               <Route exact path={'/tables/booking/:id'} component={BookingDetails}/>
-              <Route exact path={'/tables/events/new'} component={EventNew}/>
-              <Route exact path={'/tables/events/:id'} component={EventDetails}/>		  
+              <Route exact path={'/tables/event/new'} component={EventNew}/>
+              <Route exact path={'/tables/event/:id'} component={EventDetails}/>		  
 	          <Route exact path={'/waiter'} component={Waiter}/>
               <Route exact path={'/waiter/order/new'} component={OrderNew}/>
               <Route exact path={'/waiter/order/:id'} component={OrderDetails}/>

@@ -3,3 +3,23 @@
 .component {
   padding: $base-size;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  width: 50%;
+  margin-top: 40px;
+}
+
+.title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.input{
+  width: 80%;
+  margin: 10px auto;
+}
